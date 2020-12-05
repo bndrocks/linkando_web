@@ -1,4 +1,5 @@
 const baseUrl = "http://127.0.0.1:8000/api";
+const frontUrl = "https://linkando.herokuapp.com";
 const config = {
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
 };
@@ -28,7 +29,7 @@ function login() {
         console.log('login', response);
         let token = response.data.token;
         localStorage.setItem("token", token);
-        window.location.href = "file:///C:/Users/Bennett/Desktop/Git/Trabalho-Prog-Web/index.html";
+        window.location.href = frontUrl + "/index.html";
         
     }).catch((error) => {
         console.log('error login', error);
@@ -135,7 +136,7 @@ function criarUrl() {
     }
     axios.post(baseUrl + "/url", data, config).then((response) => {
         console.log('criarUrl', response);
-        window.location.href = "file:///C:/Users/Bennett/Desktop/Git/Trabalho-Prog-Web/meus-links.html";
+        window.location.href = frontUrl + "/meus-links.html";
     }).catch((error) => {
         console.log('error criarUrl', error);
     })
