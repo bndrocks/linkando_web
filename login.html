@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Linkando - Login</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="text/javascript" src="./api.js"></script>
+	</head>
+
+	<body>
+		<div class="container flex-center">
+			<!-- Início topo -->
+			<div class="topo">
+				<ul class="flex-center">
+					<!--h1 class="logo" alt="logo"></h1-->
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="login.html">MINHA CONTA</a></li>
+					<li><a href="meus-links.html">MEUS LINKS</a></li>
+					<li>
+						<div>
+							<form action="">
+								<input class="busca" type="text"  placeholder="Pesquisar">
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Início container -->
+		<div class="container-login">
+			<img src="imagens/usuario.png">
+
+				<div><input class="email" type="text" name="email" id="email" placeholder="Digite seu e-mail"></div>
+				<div><input class="senha" type="password" name="senha" id="senha" placeholder="Digite sua senha"></div>
+				<div><button class="button-roxo" onclick="login()">Logar</button></div>
+
+			<ul class="navegacao">
+					<li><a href="">Esqueceu sua senha?</a></li>
+					<li><a href="cadastro.html">Criar uma conta</a></li>
+					<img src="imagens/criar-conta.png">
+			</ul>
+		</div><!-- fim /container -->
+	</body>
+</html>

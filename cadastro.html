@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Linkando - Cadastro</title>
+		<meta charset="utf-8">
+		<!-- Estilo customizado -->
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="text/javascript" src="./api.js"></script>
+	</head>
+	<body>
+		<div class="container flex-center">
+			<!-- Início topo -->
+			<div class="topo">
+				<ul class="flex-center">
+					<!--h1 class="logo" alt="logo"></h1-->
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="login.html">MINHA CONTA</a></li>
+					<li><a href="meus-links.html">MEUS LINKS</a></li>
+					<li>
+						<div>
+							<form action="">
+								<input class="busca" type="text"  placeholder="Pesquisar">
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Início container -->
+		<div class="container-login cadastro">
+			<img src="imagens/icone-cadastro.png">
+				<div><input class="nome" type="text" name="nome" id="nome" placeholder="Digite seu nome"></div>
+				<div><input class="email" type="text" name="email" id="email" placeholder="Digite seu e-mail"></div>
+				<div><input class="senha" type="password" name="senha" id="senha" placeholder="Digite sua senha"></div>
+				<div><input class="senha" type="password" name="confirme_senha" id="confirme_senha" placeholder="Confirme sua senha"></div>
+				<div><button class="button-roxo" onclick="registrarUsuario()">Cadastrar</button></div>
+
+			<button class = "button-facebook">Cadastre-se com facebook</button>
+		</div><!-- fim /container -->
+	</body>
+</html>

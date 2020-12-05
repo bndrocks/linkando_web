@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Linkando - Juntando o que realmente importa.</title>
+		<meta charset="utf-8">
+		<!-- Estilo customizado -->
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <script type="text/javascript" src="./api.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    
+    <body onload="pegarUrlsUsuario()">
+		<!-- Início container -->
+		<div class="container flex-center">
+			<!-- Início topo -->
+			<div class="topo">
+				<ul class="flex-center">
+					<!--h1 class="logo" alt="logo"></h1-->
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="login.html">MINHA CONTA</a></li>
+					<li><a href="meus-links.html">MEUS LINKS</a></li>
+					<li>
+						<div>
+							<form action="">
+								<input class="busca" type="text" placeholder="Pesquisar">
+							</form>
+						</div>
+					</li>
+				</ul>
+            </div><!-- fim/topo -->
+            
+            <!-- Início conteudo -->
+            <div class="conteudo">
+                <div class="primario flex-center">
+                    <h2>Meus Links</h2>
+                    
+                    <!-- Conteudo 1-->
+                    <div class="caixa-conteudo">
+                        <div class="flex-center"><a class="adicionar-link" href="add-link.html" > Adicionar Link</a></div>
+                        <ul id="lista-minhas-urls">
+                            <hr/><br>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=pt-ZKlGiuW8">Fundamentos de Trigonometria - Criando uma bola quadrada do Kiko com geometria não euclidiana.</a><br>
+                                <a class="icone-usuario" href="">Usuário: Zézinho Capivara</a>
+                                <a class="icone-categoria" href="">Categoria: Matemática</a>
+                                <button class="remover-link" type="submit"></button>
+                            </li><br>
+                            <hr/><br>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=4KCm5RNjHjQ">Artigo Científico - Quem veio primeiro? O ovo ou a galinha?</a><br>
+                                <a class="icone-usuario" href="">Usuário: Galo Carijó</a>
+                                <a class="icone-categoria" href="">Categoria: Física</a>
+                                <button class="remover-link" type="submit"></button>
+                            </li><br>
+                            <hr/>
+                        </ul>
+                    </div><!-- fim /conteudo 1-->
+                </div>
+            </div><!-- fim /conteudo -->
+            <!-- Início rodapé -->
+            <div class="bottom">
+                <div class="container-rodape flex-center" style="clear: both;">
+                    <div class="rodape">
+                        &copy; Copyright 2020-2020 - Linkando
+                    </div>
+                </div>
+            </div><!-- Fim rodapé -->
+        </div><!-- fim /container -->
+    </body>
+</html>

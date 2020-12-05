@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Linkando - Adicionando Links</title>
+		<meta charset="utf-8">
+		<!-- Estilo customizado -->
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<script type="text/javascript" src="./api.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+	<body onload="pegarTags('checkbox')">
+		<div class="container flex-center">
+			<!-- Início topo -->
+			<div class="topo">
+				<ul class="flex-center">
+					<!--h1 class="logo" alt="logo"></h1-->
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="login.html">MINHA CONTA</a></li>
+					<li><a href="meus-links.html">MEUS LINKS</a></li>
+					<li>
+						<div>
+							<form action="">
+								<input class="busca" type="text"  placeholder="Pesquisar">
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Início container -->
+		<div class="container-cadastro-link">
+			<img src="imagens/logo.png">
+			<div>
+				<div>
+					<input class="link" type="text" name="link" id="link" placeholder="Informe o link">
+					<input class="link" type="text" name="name_link" id="name_link" placeholder="Informe um nome para o seu link">
+				</div>
+				<div id="categoria" class="categoria">
+
+				</div>
+				<div style="text-align: left; font-size: 18px;margin: 14px 70px 10px 70px;">Outras tags:</div>
+				<input class="link" type="text" name="outras_tags" id="outras_tags" placeholder="Informe-as separadas por vírgula. Ex: tecnologia,política">
+				<!--div>
+                    <select id="categoria" class="categoria" onchange="pegarSelect()">
+                        <option value="Banco de Dados">Banco de Dados</option>
+                        <option value="Física">Física</option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Matemática">Matemática</option>
+                        <option value="Programação">Programação</option>
+                        <option value="Redes">Redes</option>
+						<option value="Segurança da Informação">Segurança da Informação</option>
+						<option value="outro">Outro</option>
+                    </select>
+				</div-->
+				<input class="categoria" style="display: none;" type="text" name="categoria_outro" id="categoria_outro" placeholder="Separe cada categoria com vírgula">
+                <div>
+                    <select id="privacidade" class="privacidade">
+                        <option value="public">Público</option>
+                        <option value="private">Privado</option>
+                    </select>
+                </div>
+				<div><button class="button-roxo" onclick="criarUrl()">Salvar Link</button></div>
+			</div>
+		</div><!-- fim /container -->
+	</body>
+</html>
