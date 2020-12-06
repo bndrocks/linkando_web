@@ -9,6 +9,39 @@
 	</head>
 
 	<body>
+		
+	<script>
+		window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '376298433439460',
+			cookie     : true,
+			xfbml      : true,
+			version    : 'v9.0'
+		});
+			
+		FB.AppEvents.logPageView();   
+			
+		};
+	
+		(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "https://connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<script>
+		FB.getLoginStatus(function(response) {
+			statusChangeCallback(response);
+		});
+		
+		function checkLoginState() {
+		FB.getLoginStatus(function(response) {
+			statusChangeCallback(response);
+		});
+		}
+	</script>
 		<div class="container flex-center">
 			<!-- Início topo -->
 			<div class="topo">
@@ -34,6 +67,8 @@
 				<div><input class="email" type="text" name="email" id="email" placeholder="Digite seu e-mail"></div>
 				<div><input class="senha" type="password" name="senha" id="senha" placeholder="Digite sua senha"></div>
 				<div><button class="button-roxo" onclick="login()">Logar</button></div>
+				<div scope="public_profile,email"
+				onlogin="checkLoginState();" class="fb-login-button" data-size="medium" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true" data-width=""></div>
 
 			<ul class="navegacao">
 					<li><a href="">Esqueceu sua senha?</a></li>
